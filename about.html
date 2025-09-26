@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me - Vinu K. Mathew</title>
+  <link rel="icon" href="profile.jpg">
+  <link rel="stylesheet" href="about.css">
+</head>
+<body>
+  <div class="about-wrapper">
+    <div class="about-card">
+      <h1 class="about-title">About Me</h1>
+      <p class="about-intro">
+        I am <strong>Vinu K. Mathew</strong>, a Principal Systems Development Engineer with over a decade of
+        experience in <strong>Storage Engineering, Linux Administration, and Cloud Technologies</strong>.
+      </p>
+      <p class="about-intro">
+        I have worked at world-class technology companies, delivering scalable storage solutions, resolving
+        complex performance issues, and driving product improvements.
+      </p>
+
+      <!-- Work Section -->
+      <h2 class="section-title">Work</h2>
+      <div class="work-list">
+<div class="work-item">
+  <a href="https://www.dell.com" target="_blank">
+    <img src="logos/dell.png" alt="Dell Technologies">
+  </a>
+  <div class="work-details" onclick="openDellPopup()">
+    <h3>Dell Technologies</h3>
+    <p>Principal Systems Development Engineer (2016 – Present)</p>
+  </div>
+</div>
+
+<div class="work-item">
+  <a href="https://www.netapp.com" target="_blank">
+    <img src="logos/netapp.png" alt="NetApp">
+  </a>
+  <div class="work-details" onclick="openNetAppPopup()">
+    <h3>NetApp</h3>
+    <p>Professional Services Engineer (2015 – 2016)</p>
+  </div>
+</div>
+
+<div class="work-item">
+  <a href="https://www.emc.com" target="_blank">
+    <img src="logos/emc.png" alt="EMC Corporation">
+  </a>
+  <div class="work-details" onclick="openEmcPopup()">
+    <h3>EMC Corporation</h3>
+    <p>Storage Operations Specialist (2012 – 2015)</p>
+  </div>
+</div>
+
+        <div class="work-item">
+          <a href="https://www.cerner.com" target="_blank">
+            <img src="logos/cerner.png" alt="Cerner Corporation">
+          </a>
+          <div class="work-details" onclick="openCernerPopup()">
+            <h3>Cerner Corporation</h3>
+            <p>Technology Consultant (2012 – 2012)</p>
+          </div>
+        </div>
+                <div class="work-item">
+          <a href="https://www.wipro.com" target="_blank">
+            <img src="logos/wipro.png" alt="Wipro Technologies">
+          </a>
+          <div class="work-details" onclick="openWiproPopup()">
+            <h3>Wipro Technologies</h3>
+            <p>Project Engineer (Subject Matter Expert - NAS) (2010 – 2012)</p>
+          </div>
+        </div>
+      </div>
+      <!-- Back button -->
+      <div class="back-home">
+        <a href="index.html">← Back to Home</a>
+      </div>
+    </div>
+  </div>
+  <!-- Dell Technologies Popup -->
+<div id="dellPopup" class="popup-overlay">
+  <div class="popup-content">
+    <span class="popup-close" onclick="closeDellPopup()">&times;</span>
+    <h2>Dell Technologies</h2>
+    <p>• Key member of Dell’s In-Market Engineering / Storage Sustaining team, supporting enterprise-grade storage platforms including PowerScale (Isilon), EqualLogic and Compellent.</p>
+    <p>• Resolved 500+ critical customer escalations annually by reproducing issues in lab environments, performing deep-dive debugging, and partnering with developers to deliver software patches, reducing customer downtime and enhancing satisfaction.</p>
+    <p>• Designed and maintained lab infrastructure for simulation, validation, and training, improving test efficiency by 30% and enabling rapid reproduction of complex customer issues.</p>
+    <p>• Authored 40+ technical SOPs, runbooks, and workload analysis guides, improving troubleshooting efficiency for internal teams and reducing time-to-resolution for customer-facing support engineers.</p>
+    <p>• Performed root cause analysis (RCA) and post-release failure investigations using both factory and field telemetry, driving multiple firmware and software enhancements that increased product reliability across global deployments.</p>
+    <p>• Actively collaborated with cross-functional teams in engineering, QA, and support to deliver product fixes that directly improved Net Promoter Score (NPS) and C-SAT (85%+ consistently achieved).</p>
+  </div>
+</div>
+<!-- NetApp Popup -->
+<div id="netappPopup" class="popup-overlay">
+  <div class="popup-content">
+    <span class="popup-close" onclick="closeNetAppPopup()">&times;</span>
+    <h2>NetApp</h2>
+    <p>• Delivered enterprise-scale storage services for a Fortune 500 pharmaceutical client in the US, ensuring 24/7 availability of mission-critical research and business workloads.</p>
+    <p>• Provisioned and administered both block (FC, iSCSI, SAS) and file (NFS, SMB) storage environments, supporting thousands of end users across global business units.</p>
+    <p>• Led migration of petabyte-scale workloads from EMC to NetApp systems, improving performance and lowering storage TCO through optimized resource utilization.</p>
+    <p>• Troubleshot complex performance bottlenecks in SAN, TCP/IP networking, and NAS permissions, reducing average incident resolution time by 20%.</p>
+    <p>• Strengthened enterprise infrastructure security by managing multi-domain DNS and Windows Active Directory environments with zero major outages.</p>
+    <p>• Conducted cross-training sessions for 20+ engineers on EMC NAS systems, improving team skill readiness and reducing external dependency.</p>
+  </div>
+</div>
+
+<!-- EMC Popup -->
+<div id="emcPopup" class="popup-overlay">
+  <div class="popup-content">
+    <span class="popup-close" onclick="closeEmcPopup()">&times;</span>
+    <h2>EMC Corporation</h2>
+    <p>• Provided L2/L3 operational support to enterprise clients in the US and UK, overseeing 12 Isilon clusters and 50 VNX Unified Storage arrays totaling 22PB of mission-critical data.</p>
+    <p>• Managed disaster recovery replication and data migrations, ensuring zero data loss and meeting strict RPO/RTO requirements for financial and healthcare customers.</p>
+    <p>• Performed performance tuning and root-cause troubleshooting of hardware, software, and network issues, reducing downtime incidents by 15% year-over-year.</p>
+    <p>• Executed scheduled outages, firmware upgrades, and DR drills in alignment with ITIL standards, achieving 100% compliance with enterprise SLAs.</p>
+    <p>• Partnered with engineering teams to validate configurations from pre-production to production, ensuring seamless handoffs and successful go-lives.</p>
+  </div>
+</div>
+
+<!-- Cerner Popup -->
+<div id="cernerPopup" class="popup-overlay">
+  <div class="popup-content">
+    <span class="popup-close" onclick="closeCernerPopup()">&times;</span>
+    <h2>Cerner Corporation</h2>
+    <p>• Deployed Cerner Millennium software with Oracle DBMS/RAC to integrate Electronic Health Records (EHR) with third-party medical devices for real-time patient data access.</p>
+    <p>• Collaborated with cross-functional teams to install and configure EHR systems for clients, focusing on integration with medical infrastructures like GenLab and Micro Devices.</p>
+    <p>• Provided technical support for seamless integration of healthcare systems, enhancing clinical workflows and improving accessibility of patient records.</p>
+  </div>
+</div>
+
+<!-- Wipro Popup -->
+<div id="wiproPopup" class="popup-overlay">
+  <div class="popup-content">
+    <span class="popup-close" onclick="closeWiproPopup()">&times;</span>
+    <h2>Wipro Technologies</h2>
+    <p>• Led a team of 60 engineers, delivering technical support and training, consistently achieving a C-SAT score above 85%.</p>
+    <p>• Managed escalated cases, providing regular status updates and ensuring swift resolutions to critical issues.</p>
+    <p>• Drove business growth by adding a new product line to the support platform, resulting in $35K annual revenue increase.</p>
+    <p>• Collaborated with EMC teams to resolve product issues during POC and new deployments, enhancing client satisfaction.</p>
+    <p>• Interviewed and trained over 20 engineers, identifying training needs and improving overall team performance.</p>
+  </div>
+</div>
+
+<!-- JavaScript for Popup -->
+<script>
+  // Dell
+  function openDellPopup() {
+    document.getElementById("dellPopup").style.display = "flex";
+  }
+  function closeDellPopup() {
+    document.getElementById("dellPopup").style.display = "none";
+  }
+
+  // NetApp
+  function openNetAppPopup() {
+    document.getElementById("netappPopup").style.display = "flex";
+  }
+  function closeNetAppPopup() {
+    document.getElementById("netappPopup").style.display = "none";
+  }
+
+  // EMC
+  function openEmcPopup() {
+    document.getElementById("emcPopup").style.display = "flex";
+  }
+  function closeEmcPopup() {
+    document.getElementById("emcPopup").style.display = "none";
+  }
+
+    // Cerner
+  function openCernerPopup() {
+    document.getElementById("cernerPopup").style.display = "flex";
+  }
+  function closeCernerPopup() {
+    document.getElementById("cernerPopup").style.display = "none";
+  }
+
+  // Wipro
+  function openWiproPopup() {
+    document.getElementById("wiproPopup").style.display = "flex";
+  }
+  function closeWiproPopup() {
+    document.getElementById("wiproPopup").style.display = "none";
+  }
+</script>
+</body>
+</html>

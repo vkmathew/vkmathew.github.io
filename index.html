@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vinu K. Mathew</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Profile photo -->
+    <img src="profile.jpg" alt="Vinu K. Mathew" class="profile-pic">
+
+    <!-- Name and Title -->
+    <h1>Vinu K. Mathew</h1>
+    <p class="subtitle">Principal Systems Development Engineer @ Dell Technologies</p>
+
+    <!-- Divider -->
+    <hr class="divider">
+
+    <!-- Social Links -->
+<div class="links">
+  <a href="Vinu_Mathew_Resume_2025.pdf" target="_blank" class="btn">Resume</a>
+  <a href="https://github.com/vkmathew" target="_blank"><i class="fab fa-github"></i></a>
+  <a href="https://www.linkedin.com/in/vkmathew/" target="_blank"><i class="fab fa-linkedin"></i></a>
+  <a href="mailto:vinumathewofficial@gmail.com"><i class="fas fa-envelope"></i></a>
+  <a href="about.html" class="btn">About Me</a>
+</div>
+  </div>
+  <div id="visitor-counter">Visitors: <span id="count">0</span></div>
+<script>
+  // Unique namespace & key for your site
+  const counterUrl = "https://api.countapi.xyz/hit/vkmathew-website-test/visits";
+
+  fetch(counterUrl)
+    .then(res => res.json())
+    .then(res => {
+      document.getElementById("count").innerText = res.value;
+    });
+</script>
+
+</body>
+</html>
