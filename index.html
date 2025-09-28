@@ -44,8 +44,15 @@
 </head>
 <body>
   <div class="container">
-    <!-- Profile photo -->
-    <img src="profile.jpg" alt="Vinu K. Mathew" class="profile-pic">
+<!-- Profile photo -->
+<img src="profile.jpg" alt="Vinu K Mathew" class="profile-pic" id="profile-thumb">
+
+<!-- Modal for full-size image -->
+<div id="imageModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="fullProfile">
+</div>
+
 
     <!-- Name and Title -->
     <h1>Vinu K. Mathew</h1>
@@ -65,14 +72,40 @@
   </div>
   <div id="visitor-counter">Visitors: <span id="count">0</span></div>
 <script>
-  // Unique namespace & key for your site
-  const counterUrl = "https://api.countapi.xyz/hit/vkmathew-website-test/visits";
+  // Visitor counter using countapi.xyz
+  const counterUrl = "https://api.countapi.xyz/hit/vinumathew.live/visits";
 
   fetch(counterUrl)
     .then(res => res.json())
     .then(res => {
       document.getElementById("count").innerText = res.value;
-    });
+    })
+    .catch(err => console.error("Counter error:", err));
+</script>
+<script>
+  // Modal image viewer
+  var modal = document.getElementById("imageModal");
+  var img = document.getElementById("profile-thumb");
+  var modalImg = document.getElementById("fullProfile");
+  var span = document.getElementsByClassName("close")[0];
+
+  // Open modal on click
+  img.onclick = function() {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+  }
+
+  // Close modal on "X"
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // Close modal when clicking outside the image
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
 </script>
 
 </body>
