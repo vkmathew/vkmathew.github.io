@@ -70,18 +70,6 @@
   <a href="about.html" class="btn">About Me</a>
 </div>
   </div>
-  <div id="visitor-counter">Visitors: <span id="count">0</span></div>
-<script>
-  // Visitor counter using countapi.xyz
-  const counterUrl = "https://api.countapi.xyz/hit/vinumathew.live/visits";
-
-  fetch(counterUrl)
-    .then(res => res.json())
-    .then(res => {
-      document.getElementById("count").innerText = res.value;
-    })
-    .catch(err => console.error("Counter error:", err));
-</script>
 <script>
   // Modal image viewer
   var modal = document.getElementById("imageModal");
