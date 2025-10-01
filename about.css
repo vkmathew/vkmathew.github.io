@@ -163,3 +163,19 @@ body {
   margin-top: 0;
   color: #4273ee;
 }
+/* Certifications Grid */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 per row */
+  gap: 2rem 4rem; /* row-gap = 2rem, col-gap = 4rem */
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.cert-item img {
+  max-width: 120px;
+  height: 80px;              /* force same height for all logos */
+  object-fit: contain;       /* keep proportions */
+  display: block;
+  margin: 0 auto;
+}
