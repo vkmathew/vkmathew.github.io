@@ -179,3 +179,46 @@ body {
   display: block;
   margin: 0 auto;
 }
+/* Education Section */
+.education-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.education-item {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 10px;
+  min-height: 120px;   /* ensures consistent card height */
+}
+
+
+.education-item img {
+  height: 60px;
+  width: auto;
+  border-radius: 50%; /* makes logo round (like screenshot) */
+}
+
+.education-details h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.education-details p {
+  margin: 0.2rem 0;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+.education-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
