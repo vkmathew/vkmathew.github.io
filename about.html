@@ -97,26 +97,24 @@
         </div>
       </div>
 <!-- Certifications Section -->
-<h2 class="section-title">Certifications I’ve Achieved</h2>
+<h2 class="section-title">Certifications Achieved</h2>
 <div class="cert-grid">
-  <div class="cert-item comptia">
+  <div class="cert-item" onclick="openComptiaPopup()">
     <img src="logos/comptia.png" alt="CompTIA">
   </div>
-  <div class="cert-item">
+  <div class="cert-item" onclick="openCcnaPopup()">
     <img src="logos/ccna.png" alt="Cisco CCNA">
   </div>
-
-  <div class="cert-item">
+  <div class="cert-item" onclick="openEmcPopup()">
     <img src="logos/emcproven.png" alt="EMC Proven Professional">
   </div>
-  <div class="cert-item">
+  <div class="cert-item" onclick="openItilPopup()">
     <img src="logos/itil.png" alt="ITIL">
   </div>
-
-  <div class="cert-item">
+  <div class="cert-item" onclick="openCspoPopup()">
     <img src="logos/cspo.png" alt="CSPO">
   </div>
-  <div class="cert-item">
+  <div class="cert-item" onclick="openMicrosoftPopup()">
     <img src="logos/microsoft.png" alt="Microsoft">
   </div>
 </div>
@@ -233,6 +231,101 @@
   function closeWiproPopup() {
     document.getElementById("wiproPopup").style.display = "none";
   }
+  // CompTIA
+function openComptiaPopup() { document.getElementById("comptiaPopup").style.display = "flex"; }
+function closeComptiaPopup() { document.getElementById("comptiaPopup").style.display = "none"; }
+
+// CCNA
+function openCcnaPopup() { document.getElementById("ccnaPopup").style.display = "flex"; }
+function closeCcnaPopup() { document.getElementById("ccnaPopup").style.display = "none"; }
+
+// EMC
+function openEmcPopup() { document.getElementById("emcCertPopup").style.display = "flex"; }
+function closeEmcCertPopup() { document.getElementById("emcCertPopup").style.display = "none"; }
+
+// ITIL
+function openItilPopup() { document.getElementById("itilPopup").style.display = "flex"; }
+function closeItilPopup() { document.getElementById("itilPopup").style.display = "none"; }
+
+// CSPO
+function openCspoPopup() { document.getElementById("cspoPopup").style.display = "flex"; }
+function closeCspoPopup() { document.getElementById("cspoPopup").style.display = "none"; }
+
+// Microsoft
+function openMicrosoftPopup() { document.getElementById("microsoftPopup").style.display = "flex"; }
+function closeMicrosoftPopup() { document.getElementById("microsoftPopup").style.display = "none"; }
+
 </script>
+<!-- CompTIA Popup -->
+<div id="comptiaPopup" class="popup-overlay">
+  <div class="popup-content">
+    <span class="popup-close" onclick="closeComptiaPopup()">&times;</span>
+    <h2>CompTIA Cloud+</h2>
+    <p><strong>Issued:</strong> September 2024</p>
+    <p><strong>Expires:</strong> September 2027</p>
+    <p><strong>Credential ID:</strong> COMP001022620047</p>
+    <p><strong>Skills:</strong> Cloud Computing</p>
+  </div>
+</div>
+
+<!-- Cisco CCNA Popup -->
+<div id="ccnaPopup" class="popup-overlay">
+  <div class="popup-content">
+    <span class="popup-close" onclick="closeCcnaPopup()">&times;</span>
+    <h2>Cisco Certified Network Associate</h2>
+    <p><strong>Issued:</strong> November 2023</p>
+    <p><strong>Expires:</strong> November 2026</p>
+    <p><strong>Credential ID:</strong> CSCO14500556</p>
+    <p><strong>Skills:</strong> Computer Networks</p>
+  </div>
+</div>
+
+<!-- EMC Proven Popup -->
+<div id="emcCertPopup" class="popup-overlay">
+  <div class="popup-content">
+    <span class="popup-close" onclick="closeEmcCertPopup()">&times;</span>
+    <h2>EMC Proven Specialist Professional</h2>
+    <p>NAS Specialist Exam for Storage Administrators (E20-538) — <strong>Issued:</strong> 2012-03-26</p>
+    <p>VNX Specialist Exam for Implementation Engineers (E20-390) — <strong>Issued:</strong> 2012-06-16</p>
+    <p>Isilon Certified Storage Professional Exam for OneFS 6.5 (100-045) — <strong>Issued:</strong> 2013-08-05</p>
+    <p><strong>Credential ID:</strong> DELL281447</p>
+    <p><strong>Skills:</strong> NAS Storage, VNX Unified Storage, Isilon/PowerScale</p>
+  </div>
+</div>
+
+<!-- ITIL Popup -->
+<div id="itilPopup" class="popup-overlay">
+  <div class="popup-content">
+    <span class="popup-close" onclick="closeItilPopup()">&times;</span>
+    <h2>ITIL® 4 Foundation</h2>
+    <p><strong>Issued:</strong> October 2024</p>
+    <p><strong>Expires:</strong> October 2027</p>
+    <p><strong>Credential ID:</strong> GR671704935VK</p>
+    <p><strong>Skills:</strong> ITIL v4 Foundations</p>
+  </div>
+</div>
+
+<!-- CSPO Popup -->
+<div id="cspoPopup" class="popup-overlay">
+  <div class="popup-content">
+    <span class="popup-close" onclick="closeCspoPopup()">&times;</span>
+    <h2>Certified Scrum Product Owner (CSPO)</h2>
+    <p><strong>Issued:</strong> July 2024</p>
+    <p><strong>Expires:</strong> July 2026</p>
+    <p><strong>Credential ID:</strong> 1976662</p>
+    <p><strong>Skills:</strong> Agile, Scrum, Product Owner</p>
+  </div>
+</div>
+
+<!-- Microsoft Popup -->
+<div id="microsoftPopup" class="popup-overlay">
+  <div class="popup-content">
+    <span class="popup-close" onclick="closeMicrosoftPopup()">&times;</span>
+    <h2>Microsoft - Career Essentials in Generative AI</h2>
+    <p><strong>Issued:</strong> June 2024</p>
+    <p><strong>Skills:</strong> Artificial Intelligence, Generative AI</p>
+  </div>
+</div>
+
 </body>
 </html>
