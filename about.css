@@ -183,7 +183,7 @@ body {
 .education-grid {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;  /* ensures equal height */
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -194,16 +194,24 @@ body {
   align-items: center;
   gap: 1rem;
   background: rgba(255, 255, 255, 0.05);
-  padding: 1rem;
+  padding: 1.2rem;
   border-radius: 10px;
-  min-height: 120px;   /* ensures consistent card height */
+  min-height: 140px;   /* same height for both tiles */
+  transition: transform 0.2s ease;
+  cursor: pointer;     /* shows hand pointer */
+  text-decoration: none; /* remove underline from <a> */
+  color: inherit;        /* keep text color */
 }
 
+.education-item:hover {
+  transform: scale(1.05); /* hover pop effect */
+}
 
 .education-item img {
   height: 60px;
-  width: auto;
-  border-radius: 50%; /* makes logo round (like screenshot) */
+  width: 60px;
+  object-fit: contain;
+  border-radius: 50%; /* keeps it round */
 }
 
 .education-details h3 {
@@ -217,8 +225,34 @@ body {
   font-size: 0.95rem;
   color: #ccc;
 }
+
 .education-list {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
 }
+
+/* Certifications styled like Work section */
+.cert-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05); /* grey background */
+  width: 420px;   /* fixed width */
+  height: 140px;  /* fixed height */
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  margin: 0 auto; /* centers within the grid cell */
+}
+
+.cert-item:hover {
+  transform: scale(1.05);
+}
+
+.cert-item img {
+  max-width: 100px;
+  max-height: 80px; /* ensures logos don’t stretch */
+  object-fit: contain;
+}
+
