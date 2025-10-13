@@ -2,9 +2,20 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: url("background.jpg") no-repeat center center fixed;
+  /* Remove background-attachment: fixed - it causes issues on mobile (blocks smooth scroll & zoom) */
+  background-image: url("background.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll; /* changed from fixed -> scroll */
   background-size: cover;
   color: #fff;
+}
+/* Ensure page is scrollable & touch-friendly on mobile */
+html, body {
+  overflow-x: auto;              /* allow horizontal scroll if necessary */
+  overflow-y: auto;              /* allow vertical scroll */
+  -webkit-overflow-scrolling: touch; /* smooth native scrolling on iOS */
+  touch-action: auto;            /* allow default touch gestures like pinch-zoom */
 }
 
 /* Wrapper to center card */
@@ -14,7 +25,10 @@ body {
   align-items: flex-start;
   min-height: 100vh;
   padding: 3rem 1rem;
+  box-sizing: border-box;
+  overflow: visible; /* ensure child content can overflow and be scrolled */
 }
+
 
 /* Card style */
 .about-card {
