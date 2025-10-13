@@ -163,22 +163,6 @@ body {
   margin-top: 0;
   color: #4273ee;
 }
-/* Certifications Grid */
-.cert-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 per row */
-  gap: 2rem 4rem; /* row-gap = 2rem, col-gap = 4rem */
-  margin-top: 2rem;
-  text-align: center;
-}
-
-.cert-item img {
-  max-width: 120px;
-  height: 80px;              /* force same height for all logos */
-  object-fit: contain;       /* keep proportions */
-  display: block;
-  margin: 0 auto;
-}
 /* Education Section */
 .education-grid {
   display: flex;
@@ -231,28 +215,59 @@ body {
   justify-content: space-between;
   gap: 2rem;
 }
+/* ======= Certifications (responsive grid; desktop + mobile) ======= */
 
-/* Certifications styled like Work section */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.25rem;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
 .cert-item {
   display: flex;
-  justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.05); /* grey background */
-  width: 420px;   /* fixed width */
-  height: 140px;  /* fixed height */
-  border-radius: 8px;
-  transition: transform 0.2s ease;
+  justify-content: center;
+  background: rgba(0,0,0,0.22);
+  border-radius: 10px;
+  padding: 0.6rem 0.8rem;
+  width: 100%;
+  max-width: 360px;      /* keeps tiles from getting comically wide */
+  box-sizing: border-box;
+  transition: transform .16s ease;
   cursor: pointer;
-  margin: 0 auto; /* centers within the grid cell */
 }
 
 .cert-item:hover {
-  transform: scale(1.05);
+  transform: translateY(-3px);
 }
 
 .cert-item img {
-  max-width: 100px;
-  max-height: 80px; /* ensures logos don’t stretch */
+  max-width: 100%;
+  height: auto;
+  display: block;
   object-fit: contain;
+  max-height: 56px;      /* aligns logo heights without stretching */
 }
+
+@media (min-width: 1200px) {
+  .cert-grid { gap: 1.5rem; }
+  .cert-item img { max-height: 72px; }
+}
+
+@media (max-width: 420px) {
+  .cert-grid {
+    gap: 0.6rem;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  }
+  .cert-item { padding: 0.35rem; }
+  .cert-item img { max-height: 44px; }
+}
+
 
