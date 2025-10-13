@@ -163,22 +163,61 @@ body {
   margin-top: 0;
   color: #4273ee;
 }
-/* Certifications Grid */
+/* START: replace existing Certifications styles with responsive grid */
+
+/* Certifications Grid - responsive */
 .cert-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 per row */
-  gap: 2rem 4rem; /* row-gap = 2rem, col-gap = 4rem */
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;              /* uniform gap for both rows and columns */
   margin-top: 2rem;
-  text-align: center;
+  align-items: center;
+  justify-items: center;
+  padding: 0;
 }
 
-.cert-item img {
-  max-width: 120px;
-  height: 80px;              /* force same height for all logos */
-  object-fit: contain;       /* keep proportions */
-  display: block;
-  margin: 0 auto;
+/* Each tile adjusts to available cell, no fixed width/height */
+.cert-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 0.6rem;
+  min-height: 64px;      /* soft minimum; shrinks on very small screens */
+  width: 100%;           /* fills the grid cell */
+  max-width: 320px;      /* prevents it from becoming enormous on wide screens */
+  box-sizing: border-box;
+  transition: transform 0.18s ease;
+  cursor: pointer;
 }
+
+/* Hover effect (unchanged, but safe) */
+.cert-item:hover {
+  transform: scale(1.03);
+}
+
+/* Logo images scale fluidly inside tile */
+.cert-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  max-height: 64px;     /* keeps tall logos constrained */
+}
+
+/* Mobile tweaks: slightly smaller logos and padding */
+@media (max-width: 420px) {
+  .cert-item {
+    padding: 0.4rem;
+    min-height: 56px;
+  }
+  .cert-item img {
+    max-height: 52px;
+  }
+}
+
+/* END: Certifications responsive styles */
 /* Education Section */
 .education-grid {
   display: flex;
