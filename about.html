@@ -125,9 +125,9 @@ Indoors, you’ll find me exploring new tech, gaming like it’s a form of thera
   <div class="cert-item" onclick="openCcnaPopup()">
     <img src="logos/ccna.png" alt="Cisco CCNA">
   </div>
-  <div class="cert-item" onclick="openEmcPopup()">
-    <img src="logos/emcproven.png" alt="EMC Proven Professional">
-  </div>
+<div class="cert-item" onclick="openEmcCertPopup()">
+  <img src="logos/emcproven.png" alt="EMC Proven Professional">
+</div>
   <div class="cert-item" onclick="openItilPopup()">
     <img src="logos/itil.png" alt="ITIL">
   </div>
@@ -259,9 +259,10 @@ function closeComptiaPopup() { document.getElementById("comptiaPopup").style.dis
 function openCcnaPopup() { document.getElementById("ccnaPopup").style.display = "flex"; }
 function closeCcnaPopup() { document.getElementById("ccnaPopup").style.display = "none"; }
 
-// EMC
-function openEmcPopup() { document.getElementById("emcCertPopup").style.display = "flex"; }
+// EMC - Certifications (renamed to avoid conflict with EMC work popup)
+function openEmcCertPopup() { document.getElementById("emcCertPopup").style.display = "flex"; }
 function closeEmcCertPopup() { document.getElementById("emcCertPopup").style.display = "none"; }
+
 
 // ITIL
 function openItilPopup() { document.getElementById("itilPopup").style.display = "flex"; }
